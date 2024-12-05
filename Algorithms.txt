@@ -1,0 +1,60 @@
+//Explanation of un-declared helper variables
+count = number of current sites (nodes) in the graph
+sites[] = array of site objects (nodes) in the graph
+
+
+int isSite(String siteName)
+{
+	for(i = 0; i < count; i++)
+	{
+		if(sites[i].getName().equals(siteName))
+		{
+			return sites[i].getIndex()
+		}
+	}
+	
+	return -1
+
+}
+
+
+
+Algorithm allCons(String site)
+{
+	index = isSite(site)
+	
+	if(isValid)
+	{
+		for(col = 0; col < count; col++)
+		{
+			if(graph[index][col] > 0)
+				{
+					output sites[col]
+				}
+			}
+		}
+		else
+			output "Invalid site index"
+}
+		
+		
+Algorithm closest(Site site)
+{
+	index = isSite(site)
+	
+	if(isValid)
+	{
+		for(col = 0; col < count; col++)
+		{
+			if(graph[index][col] < smallest AND adjMatrix[index]col != 0)
+			{
+				smallest = graph[index][col]
+			}
+		}
+	}
+	
+	output smallest
+}
+
+
+
