@@ -7,12 +7,14 @@ int isSite(String siteName)
 {
 	for(i = 0; i < count; i++)
 	{
-		if(sites[i].getName().equals(siteName))
+		if(sites[i] == siteName)
 		{
-			return sites[i].getIndex()
+			//Returns index pos of site in array if found
+			return i
 		}
 	}
 	
+	//Otherwise return -1
 	return -1
 
 }
@@ -23,10 +25,12 @@ Algorithm allCons(String site)
 {
 	index = isSite(site)
 	
-	if(isValid)
+	//Check if the index is valid
+	if(index != -1)
 	{
 		for(col = 0; col < count; col++)
 		{
+		//If a weight greater than 0 is detected, there is a connection
 			if(graph[index][col] > 0)
 				{
 					output sites[col]
@@ -42,11 +46,12 @@ Algorithm closest(Site site)
 {
 	index = isSite(site)
 	
-	if(isValid)
+	if(index != -1)
 	{
 		for(col = 0; col < count; col++)
 		{
-			if(graph[index][col] < smallest AND adjMatrix[index]col != 0)
+			//If the weight is less than the smallest AND isn't a value of 0
+			if(graph[index][col] < smallest AND graph[index][col] != 0)
 			{
 				smallest = graph[index][col]
 			}
@@ -57,4 +62,37 @@ Algorithm closest(Site site)
 }
 
 
+
+
+Function Search(site)
+{
+	for(i = 0; i < count; i++)
+	{
+		if(sites[i] == site)
+		{
+			output sites[i]
+		}
+	}
+}
+
+
+
+
+Function Insert(site1, site2, weight)
+{
+	//Get the indeces of both input sites
+	i = isSite(site1Name)
+	j = isSite(site2Name}
+
+	if (site 1 == -1 OR site2 == -1)
+	{
+		output "Not found"	
+	}
+	else
+	{
+		//Create a new edge with both sets of co-ords 
+		graph[i][j] = weight;
+		graph[j][i] = weight;
+	}
+}
 
