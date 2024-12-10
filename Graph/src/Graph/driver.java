@@ -10,6 +10,7 @@ public class driver {
 		// TODO Auto-generated method stub
 		Graph g = new Graph();
 		
+		System.out.println("--------------------Adding Sites--------------------");
 		//Node A
 		g.addSite("Rock of Donamase", 52.637827, -6.7937563);
 		//Node B
@@ -27,6 +28,7 @@ public class driver {
 		System.out.println();
 		
 	
+		System.out.println("--------------------Searching Sites--------------------");
 		//Sample search calls
 		g.search("Rock of Donamase");
 		g.search("Portlaoise Herritage Hotel");
@@ -36,6 +38,7 @@ public class driver {
 		System.out.println();
 		
 		
+		System.out.println("--------------------Inserting Edges--------------------");
 		//Insertion of node A associated edges
 		g.insert("Rock of Donamase", "Emo Court", 7.71);
 		g.insert("Rock of Donamase", "The Heath Golf Club", 2.41);
@@ -52,7 +55,7 @@ public class driver {
 		g.insert("Emo Court", "Portlaoise Herritage Hotel", 9.97);
 		
 		//Remaining associations complete as un-dirrected graph completes the reverse association automatically
-		
+		System.out.println("--------------------Call of Graph Related Methods-------------------");
 		g.allCons("Rock of Donamase");
 		g.closest("Rock of Donamase");
 	}
